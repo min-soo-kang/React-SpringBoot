@@ -1,11 +1,16 @@
-import React from 'react';
-import SignInSide from './Component/login.js';
+import React from "react";
+import { HashRouter, Route } from "react-router-dom";
+import SignInSide from "./Component/SignInSide";
 
-export default class App extends React.Component {
-    render() {
+function App(){
+
         return (
+            <HashRouter>
+                <Route exact={true} path="/login" component={SignInSide} />
+            </HashRouter>
             
-            <SignInSide />
         )
-    }
+    
 }
+
+export default App;

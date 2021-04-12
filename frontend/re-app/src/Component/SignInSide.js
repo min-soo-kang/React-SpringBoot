@@ -23,7 +23,7 @@ function Copyright() {
   );
 }
 
-const useStyles = makeStyles((theme) => ({
+let UseStyles = makeStyles((theme) => ({
   root: {
     height: '100vh',
   },
@@ -54,9 +54,11 @@ const useStyles = makeStyles((theme) => ({
   },
 }));
 
-function SignInSide() {
-  const classes = useStyles();
-
+class SignInSide extends React.Component {
+  
+ 
+  render() {
+  const [classes]=UseStyles();
   return (
     <Grid container component="main" className={classes.root}>
       <CssBaseline />
@@ -124,6 +126,6 @@ function SignInSide() {
         </div>
       </Grid>
     </Grid>
-  );
+  )};
 }
 export default SignInSide
